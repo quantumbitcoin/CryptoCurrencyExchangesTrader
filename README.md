@@ -142,6 +142,64 @@ class Service
     }
 }
 ```
+## Coinbase Usage Example
+## Usage
+
+This is not intended to provide complete documentation of the API. For more
+detail, please refer to the
+[official documentation](https://developers.coinbase.com/api/v2).
+
+### [Market Data](https://developers.coinbase.com/api/v2#data-api)
+
+**List supported native currencies**
+
+```php
+$currencies = $client->getCurrencies();
+```
+
+**List exchange rates**
+
+```php
+$rates = $client->getExchangeRates();
+```
+
+**Buy price**
+
+```php
+$buyPrice = $client->getBuyPrice('BTC-USD');
+```
+
+**Sell price**
+
+```php
+$sellPrice = $client->getSellPrice('BTC-USD');
+```
+
+**Spot price**
+
+```php
+$spotPrice = $client->getSpotPrice('BTC-USD');
+```
+
+**Current server time**
+
+```php
+$time = $client->getCurrentServiceTime();
+```
+
+### [Users](https://developers.coinbase.com/api/v2#users)
+
+**Get authorization info**
+
+```php
+$auth = $client->getCurrentAuthorization();
+```
+
+**Lookup user info**
+
+```php
+$user = $client->getUser($userId);
+```
 ### 
 # Run tests
 > All test available in tests folder, run them directly by typing
